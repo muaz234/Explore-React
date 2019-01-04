@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
       console.log(this.props);
         this.state =  {
-          num: 0
+          num: 0,
         };
   }
   incrementNum = () =>    {
@@ -30,7 +30,7 @@ class App extends Component {
             <Textbox />
            <br/>
            {this.state.num}
-           <Button btnvalue="Send" onClick={this.incrementNum}  />
+          <button onClick={this.incrementNum}>Add</button> 
           
          
         </header>
