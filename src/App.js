@@ -4,6 +4,7 @@ import './App.css'
 import List from './List'
 import Textbox from './TextBox/Textbox';
 import Button from './Button/Button'
+import ButtonWithoutBind from './Button/ButtonWithoutBind/ButtonWithoutBind';
 
 class App extends Component {
   constructor(props){
@@ -31,8 +32,9 @@ class App extends Component {
            <br/>
            {this.state.num}
           <button onClick={this.incrementNum}>Add</button> 
-          
-         
+          <br/>
+          <Button button="Reset" />
+         <ButtonWithoutBind/>
         </header>
       </div>
     );
@@ -45,3 +47,4 @@ class App extends Component {
 }
 
 export default App;
+

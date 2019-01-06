@@ -7,8 +7,7 @@ class Button extends Component{
         return(
             <div className="Button">
             <div class="form-group">
-            <button>{this.props.btnvalue}</button>        
-                {/* <input type="reset" value="Reset" name="reset" class="btn btn-danger"></input> */}
+           <button>{this.props.button}</button>
             </div>
             </div>
         )
