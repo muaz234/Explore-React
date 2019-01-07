@@ -13,7 +13,7 @@ class ButtonWithoutBind extends Component {
     }
     render(){
 
-        const toggle = this.state.toggle;
+        const { toggle } = this.state;
         return(
             <div>
                 <button onClick={this.ToggleButton}>

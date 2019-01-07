@@ -12,14 +12,28 @@ class App extends Component {
       console.log(this.props);
         this.state =  {
           num: 0,
+          name : ''
+
         };
   }
   incrementNum = () =>    {
     this.setState({
-      num : this.state.num + 1  
+      num : this.state.num + 1,
+
     }) ; 
    }  
+
+   saveValue = (event) => {
+    this.setState({name : event.target.value})
+   }
+
+   showValue = () =>{
+     console.log(this.state.name)
+   }
+
   render() {
+    const {name} = this.state.name; 
+
     return (
       <div className="App">
         <header className="App-header">
@@ -32,9 +46,14 @@ class App extends Component {
            <br/>
            {this.state.num}
           <button onClick={this.incrementNum}>Add</button> 
-          <br/>
           <Button button="Reset" />
          <ButtonWithoutBind/>
+         {this.state.name}
+
+         <form>
+           <input type="text" value={this.state.name} name="testing" placeholder={name ? name : null} onChange={this.saveValue} />
+           <button type="submit" onClick="{this.showValue}">Enter</button>
+         </form>
         </header>
       </div>
     );
