@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 
 export class Textbox extends Component {
-    render(){
-        return (
-            <div className="Textbox">
-                <input type="number" name="id" value="15" placeholder="Enter an id"></input> <br/>
-                <input type="text" name="Description" value="tommorow is Saturday" placeholder="Enter a value"></input>
-            </div>
-        )
-
-    }
+  render () {
+    return (
+      <div className='Textbox'>
+        <input type='number' name='id' value={this.props.value} placeholder='Enter an id' /> <br />
+        <input type='text' name='Description' value={this.props.text} placeholder='Enter a value' />
+      </div>
+    )
+  }
 }
 
-export default Textbox ;
+export default Textbox 
