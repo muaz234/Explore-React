@@ -3,16 +3,13 @@ import React, { Component } from 'react'
 class ButtonWithoutBind extends Component {
 
     constructor(){
-        super();
-        this.state = { toggle: false};
-
+        super()
+        this.state = { toggle: false}
     }
-
     ToggleButton = () =>{
         this.setState(prevState => ({ toggle : !prevState.toggle}));
     }
     render(){
-
         const { toggle } = this.state;
         return(
             <div>
@@ -20,8 +17,7 @@ class ButtonWithoutBind extends Component {
                     {toggle ? "ON" : "OFF"}
                 </button>
             </div>
-        );
+        )
     }
 }
-
-export default ButtonWithoutBind;
+export default ButtonWithoutBind
