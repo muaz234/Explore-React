@@ -12,14 +12,18 @@ class App extends Component {
       console.log(this.props);
         this.state =  {
           num: 0,
+        
         };
   }
+
+  
   incrementNum = () =>    {
     this.setState({
       num : this.state.num + 1  
     }) ; 
    }  
   render() {
+    
     return (
       <div className="App">
         <header className="App-header">
